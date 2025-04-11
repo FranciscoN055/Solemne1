@@ -22,10 +22,10 @@
 
      <style>
          .billing-form input:invalid {
-             border-color: #dc3545; /* Rojo Bootstrap para inválido */
+             border-color: #dc3545;
          }
          .billing-form input:valid {
-             border-color: #28a745; /* Verde Bootstrap para válido */
+             border-color: #28a745;
          }
      </style>
 
@@ -163,7 +163,7 @@
     <script src="js/scrollax.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-        // --- Funciones Helper del Carrito (necesarias aquí también) ---
+        // --- Funciones Helper del Carrito --
         function getCart() {
             return JSON.parse(localStorage.getItem('shoppingCart')) || [];
         }
@@ -181,7 +181,6 @@
         function displayCheckoutTotals() {
             const cart = getCart();
             const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            // Valores fijos por ahora, puedes hacerlos dinámicos si es necesario
             const delivery = 0.00;
             const discount = 0.00;
             const total = subtotal + delivery - discount;
@@ -215,20 +214,16 @@
             // 1. Botón "Realizar Pedido"
             if (placeOrderBtn) {
                 placeOrderBtn.addEventListener('click', function(event) {
-                    event.preventDefault(); // No enviar el formulario todavía
+                    event.preventDefault();
 
                     // Validar el formulario de pago
                     if (checkoutForm.checkValidity()) {
-                        // Si el formulario es válido:
-                        this.style.display = 'none'; // Ocultar botón "Realizar Pedido"
-                        confirmPurchaseBtn.style.display = 'block'; // Mostrar botón "Confirmar Compra"
+                        this.style.display = 'none'; 
+                        confirmPurchaseBtn.style.display = 'block';
 
-                        // Opcional: Deshabilitar campos del formulario después de validar
                          Array.from(checkoutForm.elements).forEach(element => element.disabled = true);
 
                     } else {
-                        // Si el formulario NO es válido:
-                        // Muestra los mensajes de validación del navegador
                         checkoutForm.reportValidity();
                     }
                 });
@@ -240,7 +235,7 @@
                     event.preventDefault();
 
                     // Simular procesamiento de pago...
-                    alert('¡Compra Confirmada! Gracias por su pedido.');
+                    alert('¡Compra Confirmada! Gracias por su compra.');
 
                     // Limpiar el carrito
                     localStorage.removeItem('shoppingCart');
@@ -250,11 +245,6 @@
                     displayCheckoutTotals();    // Pone los totales a $0.00
                     this.disabled = true;       // Deshabilitar el botón de confirmar
                     this.textContent = 'Compra Realizada'; // Cambiar texto del botón
-
-                    // Opcional: Redirigir a una página de agradecimiento después de un momento
-                    // setTimeout(() => {
-                    //     window.location.href = 'thankyou.html'; // Cambia a tu página de agradecimiento
-                    // }, 2000);
                 });
             }
         }); // Fin de DOMContentLoaded
