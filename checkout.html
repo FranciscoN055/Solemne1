@@ -76,34 +76,35 @@
                     <form action="#" class="billing-form" id="checkout-form">
                         <h3 class="mb-4 billing-heading">Detalles de Pago</h3>
                         <div class="row align-items-end">
+				
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="card-name">Nombre en la Tarjeta</label>
                                     <input type="text" id="card-name" class="form-control" placeholder="Nombre completo" required>
-                                </div>
-                            </div>
+				</div>
+			    </div>
+			
+				<div class="col-md-12">
+				    <div class="form-group">
+					    <label for="card-number">Número de Tarjeta</label>
+					    <input type="text" id="card-number" class="form-control" placeholder="xxxx xxxx xxxx xxxx" inputmode="numeric" maxlength="19" required>
+				    </div>
+			    </div>
 
-                            <div class="col-md-12">
-								<div class="form-group">
-									<label for="card-number">Número de Tarjeta</label>
-									<input type="text" id="card-number" class="form-control" placeholder="xxxx xxxx xxxx xxxx" inputmode="numeric" maxlength="19">
-								</div>
-							</div>
-
-                            <div class="col-md-6">
-								<div class="form-group">
-									<label for="card-expiry">Fecha de Vencimiento</label>
-									<input type="text" id="card-expiry" class="form-control" placeholder="DD/AA" maxlength="5">
-								</div>
-							</div>
-
-                            <div class="col-md-6">
-								<div class="form-group">
-									<label for="card-cvv">CVV</label>
-									<input type="text" id="card-cvv" class="form-control" placeholder="123" inputmode="numeric" maxlength="4">
-								</div>
-							</div>
-                        </div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="card-expiry">Fecha de Vencimiento</label>
+						<input type="text" id="card-expiry" class="form-control" placeholder="DD/AA" maxlength="5" required>
+					</div>
+				</div>
+				
+				<div class="col-md-6">
+					<div class="form-group">
+						<label for="card-cvv">CVV</label>
+						<input type="text" id="card-cvv" class="form-control" placeholder="123" inputmode="numeric" maxlength="4" required>
+					</div>
+				</div>
+			</div>
                         </form></div>
 
                 <div class="col-xl-5">
