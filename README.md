@@ -3,7 +3,15 @@
 ## Simulación de aplicación web para "Floristeria Jardin Encantado"
 En esta aplicación se permite visualizar un menu de productos, filtrarlos por categoria, añadir al carrito y simular una compra virtual.
 
-## Despliegue en Docker Playground
+## Despliegue local con Docker
+1. **En una terminar clonar el repositorio usando: git clone https://github.com/FranciscoN055/Solemne1.git**
+2. **Navegar a la carpeta donde se encuentra el Dockerfile con: cd Solemne1:**
+3. **Construir la imagen Docker con: docker build -t floristeria-jardin-encantado .**
+4. **Ejecutar el contenedor con el servidor de Apache usando: docker run -d -p 8080:80 --name mi-floristeria floristeria-jardin-encantado**
+5.  **Para acceder a la aplicación buscar en el navegador "http://localhost:8080"**
+6.  **Para detener el contenedor: docker stop mi-floristeria y para eliminar: docker rm mi-floristeria**
+
+## Despliegue con Docker Playground
 1. **Primero actualizar paquetes con apk update e instalar nano con apk add nano**
 2. **Crear y editar el archivo Dockerfile con el siguiente contenido:**
 
