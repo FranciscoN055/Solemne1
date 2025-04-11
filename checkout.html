@@ -212,7 +212,7 @@
 
             // --- EVENT LISTENERS ---
 
-            // 1. Botón "Realizar Pedido"
+            // 1. Botón "Realizar Compra"
             if (placeOrderBtn) {
                 placeOrderBtn.addEventListener('click', function(event) {
                     event.preventDefault();
@@ -236,7 +236,7 @@
                     event.preventDefault();
 
                     // Simular procesamiento de pago...
-                    alert('¡Compra Confirmada! Gracias por su compra.');
+                    alert('Gracias por su compra.');
 
                     // Limpiar el carrito
                     localStorage.removeItem('shoppingCart');
