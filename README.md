@@ -7,6 +7,7 @@ En esta aplicación se permite visualizar un menu de productos, filtrarlos por c
 1. **Primero actualizar paquetes con apk update e instalar nano con apk add nano**
 2. **Crear y editar el archivo Dockerfile con el siguiente contenido:**
 
+```
 # Usa una imagen oficial de Apache HTTP Server
 FROM httpd:latest
 
@@ -28,6 +29,7 @@ EXPOSE 80
 # Inicia Apache en primer plano (este es el comando por defecto de la imagen base httpd)
 # Se incluye para ser explícito, siguiendo el estilo de tu ejemplo.
 CMD ["httpd-foreground"]
+```
 
 3. **Construir la imagen Docker con: docker build -t floristeria-jardin-encantado .**
 4. **Ejecutar el contenedor con el servidor de Apache usando: docker run -d -p 8080:80 --name mi-floristeria floristeria-jardin-encantado**
