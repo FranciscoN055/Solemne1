@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Floristeria Jardin Encantado - Checkout</title> <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+     <style>
+         .billing-form input:invalid {
+             border-color: #dc3545; /* Rojo Bootstrap para inválido */
+         }
+         .billing-form input:valid {
+             border-color: #28a745; /* Verde Bootstrap para válido */
+         }
+     </style>
+
+</head>
+<body class="goto-here">
+    <div class="py-1 bg-primary">
+       <div class="container">
+           </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Floristeria Jardin Encantado</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menú
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item active dropdown">
+                         <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tienda</a>
+                         <div class="dropdown-menu" aria-labelledby="dropdown04">
+                              <a class="dropdown-item" href="index.html">Tienda</a>
+                              <a class="dropdown-item" href="cart.html">Carrito</a>
+                              <a class="dropdown-item" href="checkout.html">Pagar</a>
+                         </div>
+                    </li>
+                    <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[<span id="cart-count">0</span>]</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="hero-wrap hero-bread" style="background-image: url('images/floreriaFondo.jpg');">
+        <div class="container">
+            <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                    <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Checkout</span></p>
+                    <h1 class="mb-0 bread">Pago</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 ftco-animate">
+                    <form action="#" class="billing-form" id="checkout-form">
+                        <h3 class="mb-4 billing-heading">Detalles de Pago</h3>
+                        <div class="row align-items-end">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="card-name">Nombre en la Tarjeta</label>
+                                    <input type="text" id="card-name" class="form-control" placeholder="Nombre completo como aparece en la tarjeta" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="card-number">Número de Tarjeta</label>
+                                    <input type="text" id="card-number" class="form-control" placeholder="xxxx xxxx xxxx xxxx" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="card-expiry">Fecha de Vencimiento</label>
+                                    <input type="text" id="card-expiry" class="form-control" placeholder="MM/AA" pattern="\d{2}/\d{2}" maxlength="5" required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="card-cvv">CVV</label>
+                                    <input type="text" id="card-cvv" class="form-control" placeholder="123" inputmode="numeric" pattern="\d{3,4}" maxlength="4" required>
+                                </div>
+                            </div>
+                        </div>
+                        </form></div>
+
+                <div class="col-xl-5">
+                    <div class="row mt-5 pt-3">
+                        <div class="col-md-12 d-flex mb-5">
+                            <div class="cart-detail cart-total p-3 p-md-4">
+                                <h3 class="billing-heading mb-4">Total del Carrito</h3>
+                                <p class="d-flex">
+                                    <span>Subtotal</span>
+                                    <span id="checkout-subtotal">$0.00</span>
+                                </p>
+                                <p class="d-flex">
+                                    <span>Envío</span>
+                                    <span id="checkout-delivery">$0.00</span>
+                                </p>
+                                <p class="d-flex">
+                                    <span>Descuento</span>
+                                    <span id="checkout-discount">$0.00</span>
+                                </p>
+                                <hr>
+                                <p class="d-flex total-price">
+                                    <span>Total</span>
+                                    <span id="checkout-total">$0.00</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="cart-detail p-3 p-md-4">
+                                <p><button id="place-order-btn" class="btn btn-primary py-3 px-4 w-100">Realizar compra</button></p>
+                                <p><button id="confirm-purchase-btn" class="btn btn-success py-3 px-4 w-100" style="display: none;">Confirmar Compra</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div> </div>
+        </div>
+    </section> <section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
+        </section>
+
+    <footer class="ftco-footer ftco-section">
+        </footer>
+
+    <div id="ftco-loader" class="show fullscreen"> ... </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // --- Funciones Helper del Carrito (necesarias aquí también) ---
+        function getCart() {
+            return JSON.parse(localStorage.getItem('shoppingCart')) || [];
+        }
+
+        function updateCartCount() {
+            const cart = getCart();
+            const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const cartCountElement = document.getElementById('cart-count');
+            if (cartCountElement) {
+                cartCountElement.textContent = count;
+            }
+        }
+
+        // --- Funciones específicas de Checkout ---
+        function displayCheckoutTotals() {
+            const cart = getCart();
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            // Valores fijos por ahora, puedes hacerlos dinámicos si es necesario
+            const delivery = 0.00;
+            const discount = 0.00;
+            const total = subtotal + delivery - discount;
+
+            // Actualiza los elementos span con los valores calculados
+            const subtotalEl = document.getElementById('checkout-subtotal');
+            const deliveryEl = document.getElementById('checkout-delivery');
+            const discountEl = document.getElementById('checkout-discount');
+            const totalEl = document.getElementById('checkout-total');
+
+            if(subtotalEl) subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+            if(deliveryEl) deliveryEl.textContent = `$${delivery.toFixed(2)}`;
+            if(discountEl) discountEl.textContent = `$${discount.toFixed(2)}`;
+            if(totalEl) totalEl.textContent = `$${total.toFixed(2)}`;
+        }
+
+        // --- Lógica Principal (Ejecutada cuando el DOM está listo) ---
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // --- INICIALIZACIÓN ---
+            updateCartCount();      // Actualiza contador navbar
+            displayCheckoutTotals(); // Muestra totales del carrito
+
+            // --- REFERENCIAS A ELEMENTOS ---
+            const checkoutForm = document.getElementById('checkout-form');
+            const placeOrderBtn = document.getElementById('place-order-btn');
+            const confirmPurchaseBtn = document.getElementById('confirm-purchase-btn');
+
+            // --- EVENT LISTENERS ---
+
+            // 1. Botón "Realizar Pedido"
+            if (placeOrderBtn) {
+                placeOrderBtn.addEventListener('click', function(event) {
+                    event.preventDefault(); // No enviar el formulario todavía
+
+                    // Validar el formulario de pago
+                    if (checkoutForm.checkValidity()) {
+                        // Si el formulario es válido:
+                        this.style.display = 'none'; // Ocultar botón "Realizar Pedido"
+                        confirmPurchaseBtn.style.display = 'block'; // Mostrar botón "Confirmar Compra"
+
+                        // Opcional: Deshabilitar campos del formulario después de validar
+                         Array.from(checkoutForm.elements).forEach(element => element.disabled = true);
+
+                    } else {
+                        // Si el formulario NO es válido:
+                        // Muestra los mensajes de validación del navegador
+                        checkoutForm.reportValidity();
+                    }
+                });
+            }
+
+            // 2. Botón "Confirmar Compra"
+            if (confirmPurchaseBtn) {
+                confirmPurchaseBtn.addEventListener('click', function(event) {
+                    event.preventDefault();
+
+                    // Simular procesamiento de pago...
+                    alert('¡Compra Confirmada! Gracias por su pedido.');
+
+                    // Limpiar el carrito
+                    localStorage.removeItem('shoppingCart');
+
+                    // Actualizar la interfaz
+                    updateCartCount();         // Pone el contador de la navbar a 0
+                    displayCheckoutTotals();    // Pone los totales a $0.00
+                    this.disabled = true;       // Deshabilitar el botón de confirmar
+                    this.textContent = 'Compra Realizada'; // Cambiar texto del botón
+
+                    // Opcional: Redirigir a una página de agradecimiento después de un momento
+                    // setTimeout(() => {
+                    //     window.location.href = 'thankyou.html'; // Cambia a tu página de agradecimiento
+                    // }, 2000);
+                });
+            }
+        }); // Fin de DOMContentLoaded
+    </script>
+    </body>
+</html>
